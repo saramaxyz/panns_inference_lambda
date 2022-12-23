@@ -5,7 +5,7 @@ from pathlib import Path
 
 sample_rate = 32000
 
-labels_csv_path = '{}/panns_data/class_labels_indices.csv'.format(str(Path.home()))
+labels_csv_path = '/tmp/class_labels_indices.csv'.format(str(Path.home()))
 
 # Download labels if not exist
 if not os.path.isfile(labels_csv_path):
