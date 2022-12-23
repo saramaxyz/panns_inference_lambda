@@ -5,11 +5,11 @@ from pathlib import Path
 
 sample_rate = 32000
 
-labels_csv_path = 'class_labels_indices.csv'
+labels_csv_path = "/tmp/class_labels_indices.csv"
 
 # Download labels if not exist
 if not os.path.isfile(labels_csv_path):
-	labels_csv_path = "/tmp/class_labels_indices.csv"
+	
 	os.makedirs(os.path.dirname(labels_csv_path), exist_ok=True)
 	os.system('wget -O "{}" "http://storage.googleapis.com/us_audioset/youtube_corpus/v1/csv/class_labels_indices.csv"'.format(labels_csv_path))
 
