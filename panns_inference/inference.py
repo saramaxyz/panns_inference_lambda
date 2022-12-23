@@ -28,11 +28,11 @@ class AudioTagging(object):
         """Audio tagging inference wrapper.
         """
         if not checkpoint_path:
-            checkpoint_path='Cnn14_mAP=0.431.pth'
+            checkpoint_path = "/tmp/Cnn14_mAP=0.431.pth"
         print('Checkpoint path: {}'.format(checkpoint_path))
         
-        if not os.path.exists(checkpoint_path) or os.path.getsize(checkpoint_path) < 3e8:
-            checkpoint_path = "/tmp/Cnn14_mAP=0.431.pth"
+        if not os.path.exists(checkpoint_path) or os.path.getsize(checkpoint_path) < 3e9:
+            
             create_folder(os.path.dirname(checkpoint_path))
             zenodo_path = 'https://zenodo.org/record/3987831/files/Cnn14_mAP%3D0.431.pth?download=1'
             os.system('wget -O "{}" "{}"'.format(checkpoint_path, zenodo_path))
@@ -88,11 +88,11 @@ class SoundEventDetection(object):
             interpolate_mode, 'nearest' |'linear'
         """
         if not checkpoint_path:
-            checkpoint_path='Cnn14_DecisionLevelMax.pth'
+            checkpoint_path = "/tmp/Cnn14_DecisionLevelMax.pth"
         print('Checkpoint path: {}'.format(checkpoint_path))
 
-        if not os.path.exists(checkpoint_path) or os.path.getsize(checkpoint_path) < 3e8:
-            checkpoint_path = "/tmp/Cnn14_DecisionLevelMax.pth"
+        if not os.path.exists(checkpoint_path) or os.path.getsize(checkpoint_path) < 3e9:
+            
             create_folder(os.path.dirname(checkpoint_path))
             os.system('wget -O "{}" https://zenodo.org/record/3987831/files/Cnn14_DecisionLevelMax_mAP%3D0.385.pth?download=1'.format(checkpoint_path))
 
