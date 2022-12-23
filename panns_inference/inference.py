@@ -28,7 +28,7 @@ class AudioTagging(object):
         """Audio tagging inference wrapper.
         """
         if not checkpoint_path:
-            checkpoint_path='/tmp/panns_data/Cnn14_mAP=0.431.pth'.format(str(Path.home()))
+            checkpoint_path='/tmp/Cnn14_mAP=0.431.pth'.format(str(Path.home()))
         print('Checkpoint path: {}'.format(checkpoint_path))
         
         if not os.path.exists(checkpoint_path) or os.path.getsize(checkpoint_path) < 3e8:
@@ -87,7 +87,7 @@ class SoundEventDetection(object):
             interpolate_mode, 'nearest' |'linear'
         """
         if not checkpoint_path:
-            checkpoint_path='/tmp/panns_data/Cnn14_DecisionLevelMax.pth'.format(str(Path.home()))
+            checkpoint_path='/tmp/Cnn14_DecisionLevelMax.pth'.format(str(Path.home()))
         print('Checkpoint path: {}'.format(checkpoint_path))
 
         if not os.path.exists(checkpoint_path) or os.path.getsize(checkpoint_path) < 3e8:
